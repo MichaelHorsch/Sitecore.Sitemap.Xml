@@ -145,3 +145,7 @@ containing the configuration for each managed template (i.e. three properties: `
 In your `Process()` method, you are required to add to the `args.Nodes` list, which is a list of `UrlDefinition`.
 `UrlDefinition`s consist of a `string` that corresponds to a URL, and a `DateTime` corresponding to the last
 modified date/time. The elements you add to this list are added to the final sitemap.xml output.
+
+## Important note for 8.1 Users (and possibly before) & site hostName property.
+
+The tool checks for and compares against the hostName property on your site's <site> definition inside of SiteDefinitions.config or Sitecore.config.  Make sure this value is set.
