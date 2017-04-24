@@ -19,7 +19,7 @@ namespace LD.Sitemap.Xml
                 .Select(node => XmlUtil.GetAttribute("name", node));
 
             var website = Sitecore.Configuration.Factory.GetSiteInfoList()
-                .FirstOrDefault(i => i.HostName.ToLower() == context.Request.Url.Host.ToLower());
+                .FirstOrDefault(i => i.TargetHostName.ToLower() == context.Request.Url.Host.ToLower());
             if (website == null || (website.Port > 0 && website.Port != context.Request.Url.Port))
             {
                 context.Response.StatusCode = 404;
