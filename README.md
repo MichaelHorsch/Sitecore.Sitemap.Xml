@@ -148,4 +148,4 @@ modified date/time. The elements you add to this list are added to the final sit
 
 ## Important note for 8.1 Users (and possibly before) & site hostName property.
 
-The tool checks for and compares against the hostName property on your site's <site> definition inside of SiteDefinitions.config or Sitecore.config.  Make sure this value is set.
+The tool checks for and compares against the targetHostName property (instead of hostName property) on your site's <site> definition inside of SiteDefinitions.config or Sitecore.config.  Make sure this value is set.
